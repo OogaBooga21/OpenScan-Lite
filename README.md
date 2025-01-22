@@ -1,51 +1,114 @@
-# OpenScan-Lite
-An arduino-based branch of the OpenScan project
+# OpenScan-Lite  
+An Arduino-based branch of the OpenScan project.  
 
-# Why?/ What can it do?/ How to use?/What you need
-A simpler, cheaper version of OpenScan Classic, but with less feature 
-This is basically a glorified stand, it will only program and pose the object you are trying to scan, it will NOT program the picture-taking
-Simply download the code, and run it, It's controlled via the serial monitor; 1 to start scanning, 2 to stop 
-2 steppers, 2 drivers, 1 arduino, 1 capacitor(optional but very much recommended), 12V 5A PSU(might work with a weaker one, but wont recommend it)
+---
 
+## Overview  
+OpenScan-Lite is a simpler, cheaper version of OpenScan Classic with fewer features.  
+Its primary purpose is to program and pose the object you are scanning.  
 
-# How to build: 
-1) Download and 3D-print the OpenScan Classic files 
-you wont need all the files, only the ones that compose the structure of the stand, so: 
-https://github.com/OpenScan-org/OpenScan-Design/tree/main/files/Classic/V1
-from here:
-Adapter1
-Adapter2 gear large
-Gear Small (2 worked for me, but worth trying both)
-Skip all pi-realted items
-Rotary arm
-Stand1 and Stand2
-And all the turntable attatchments you need
+### Key Points:  
+- **It does NOT program picture-taking** (you'll need to handle this separately) (Some Options given bellow).  
+- Functions as a glorified stand to automate scanning movements.  
 
-2) Build the circuit: 
-Follow the wiring from the arduio code, and this tutorial: 
-https://howtomechatronics.com/tutorials/arduino/stepper-motors-and-arduino-the-ultimate-guide/
-a)for the table stepper:
-    i)pin2 -direction
-    ii)pin3 -step
-b)for the stand stepper:
-    i)pin9 -direction
-    ii)pin10 -step
+---
 
-the code assumes both steppers are in 1/16 microstepping mode, so if you wire it differently, change the code
-follow the guide provided above to see how to use the steppers with drivers and how to set them in microstepping mode.
+## Features  
+- Controlled via the Serial Monitor: (in the arduino IDE)
+  - Press **1** to start scanning.  
+  - Press **2** to stop scanning.  
+- Designed for affordability and DIY customization.  
 
-3) Download the OpenCamera app (optional if you use a camera that you can program)
-This option is decent since it keeps the image's exifdata. And can be programmed to take a selected number of photos at a given interval (which is what we need, since the code currently changes positions every 3 seconds)
+---
 
-4) Optional if not using phone, or using some other stand:
-You will need to keep your phone steady, so I suggest you build any phone stand you deem fit for holding your phone still for roughly 10 minutes; a great example could be this: 
-https://www.thingiverse.com/thing:3363730
+## What You Need  
 
-# Software:
-The pictures will be saved in your phone, from here, there are many options.
-I got the best results from OpenScanCloud but I got some decent results also by using Meshroom, and ColMap, worth giving a try.
+### Hardware:  
+1. **2 stepper motors**  
+2. **2 stepper motor drivers**  
+3. **1 Arduino board**  
+4. **1 capacitor** *(optional but highly recommended)*  
+5. **12V 5A Power Supply Unit (PSU)**  
+   - A weaker PSU might work, but it is not recommended.  
 
-# Extras
-This is a very barebones implementation, so feel free to add anything you like on it: 
-maybe instead of using the OpenCamera app, use a bluetooth module and trigger the phne through an app like dabble
-or replace the arduino for a HID capable device.
+---
+
+## How to Build  
+
+### 1. **Download and 3D-Print the Structure**  
+You’ll need only the structural files from the OpenScan Classic project.  
+Get the files from this link:  
+[OpenScan Classic Files](https://github.com/OpenScan-org/OpenScan-Design/tree/main/files/Classic/V1).  
+
+Required parts:  
+- **Adapter1**  
+- **Adapter2 gear large**  
+- **Gear Small** *(2 versions available; try both to see which works best)*  
+- **Rotary arm**  
+- **Stand1** and **Stand2**  
+- Any required turntable attachments.  
+
+**Skip any files related to Raspberry Pi.**  
+
+---
+
+### 2. **Build the Circuit**  
+Follow the wiring instructions provided in the Arduino code and use this tutorial as a reference:  
+[Stepper Motors and Arduino Guide](https://howtomechatronics.com/tutorials/arduino/stepper-motors-and-arduino-the-ultimate-guide/).  
+
+#### Wiring Overview:  
+- **Table Stepper:**  
+  - Pin **2** → Direction  
+  - Pin **3** → Step  
+
+- **Stand Stepper:**  
+  - Pin **9** → Direction  
+  - Pin **10** → Step  
+
+The code assumes both stepper motors are set to **1/16 microstepping mode**.  
+If you wire them differently, update the code accordingly.  
+Refer to the tutorial above for guidance on using stepper motors with drivers and setting the microstepping mode.  
+
+---
+
+### 3. **Install a OpenCamera App (Optional)**  
+If using a programmable camera, you can skip this step. Otherwise:  
+- Download the OpenCamera app on your phone.
+- This app can be programmed to take photos at specific intervals.  
+- The default code changes positions every **3 seconds**, so configure OpenCamera accordingly.  
+
+---
+
+### 4. **Optional: Build a Phone Stand**  
+If using a smartphone, ensure it remains steady for around 10 minutes.  
+- Use a phone stand like this:  
+  [Thingiverse Phone Stand](https://www.thingiverse.com/thing:3363730).  
+- Alternatively, build any stand you find suitable.  
+
+---
+
+## Software  
+
+After capturing the pictures, save them on your phone or computer.  
+Here are some options for processing your scanned images:  
+
+1. **[OpenScanCloud](https://www.openscancloud.com/):**  
+   - Best results with minimal effort.  
+
+2. **[Meshroom](https://alicevision.org/#meshroom):**  
+   - Great for advanced users who want more control over the process.  
+
+3. **[ColMap](https://colmap.github.io/):**  
+   - Another powerful option worth trying.  
+
+---
+
+## Customization Ideas  
+
+This implementation is intentionally barebones, so feel free to experiment and enhance it:  
+- Replace the **OpenCamera app** with a Bluetooth module and trigger the phone using an app like **Dabble**.  
+- Upgrade the Arduino to an HID-capable device for more advanced features.  
+
+---
+
+Happy scanning with OpenScan-Lite! 🚀
