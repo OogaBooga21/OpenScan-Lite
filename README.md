@@ -68,6 +68,8 @@ Follow the wiring instructions provided in the Arduino code and use this tutoria
 The code assumes both stepper motors are set to **1/16 microstepping mode**.  
 If you wire them differently, update the code accordingly.  
 Refer to the tutorial above for guidance on using stepper motors with drivers and setting the microstepping mode.  
+![image](https://github.com/user-attachments/assets/e0ef6379-25c7-4145-a01e-29a77cb11d9f)
+should look somethign like this
 
 ---
 
