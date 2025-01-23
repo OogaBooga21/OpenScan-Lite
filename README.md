@@ -112,3 +112,4 @@ This implementation is intentionally barebones, so feel free to experiment and e
 ---
 
 Happy scanning with OpenScan-Lite! 🚀
+And If you can, please support the original project.
