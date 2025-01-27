@@ -59,7 +59,7 @@ Serial.println("Press 2 to stop scanner");
         char a = processSerialdata();
         if( a == '2')
         {
-        return "S";
+        return 'S';
         }
 
 
@@ -83,13 +83,13 @@ Serial.println("Press 2 to stop scanner");
     }
 
   }
-  return "C";
+  return 'C';
 }
 
 void loop()
 {
   char a = processSerialdata();
-  char flag = "?";
+  char flag = '?';
   if( a == '1')
   {
     flag = scan_object();
