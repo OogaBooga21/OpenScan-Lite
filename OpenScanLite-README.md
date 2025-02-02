@@ -71,6 +71,9 @@ pin16 is left, pint 17 is right, and pin 25 is select, all should be wired to lo
 
 if you plan to use other pins, make sure the pins support input/ouput (most do, unless specified otherwise)
 
+*LIGHTING* It's not included here because the are MANY OPTIONS, I use a light tent, but any sort of soft lighting should give decent results, and for good results, please follow OpenScan's tutorial:
+https://openscan-org.github.io/OpenScan-Doc/photogrammetry/basics/
+general rules: soft light, cross-polarisation -> good
 
 ---
 
