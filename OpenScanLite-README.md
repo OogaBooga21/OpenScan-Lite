@@ -109,5 +109,36 @@ Here are some options for processing your scanned images:
    - Another powerful option worth trying.  
 ---
 
+## CUSTOMISING VARIABLES:
+
+#define BUTTON_LEFT 16
+#define BUTTON_RIGHT 17
+#define BUTTON_SEL 25
+
+// Driver config
+const int table_dirPin = 23;
+const int table_stepPin = 12; // for tilting (big "table")
+const int stand_dirPin = 27;
+const int stand_stepPin = 14; // for rotation (small "stand")
+
+// Timings
+const int step_delay_us = 350; // how fast the steppers rotate
+const int pose_delay_ms = 750; // delay between poses and photos (If camera focuses fast, decrease, if slow, increase)
+
+const int steps_per_revolution = 200 * 16; // using 1/16 microstepping
+const float ratio = 5.33333; // gear ratio between the stepper spock and the big arm spock
+
+//if (bleKeyboard.isConnected()) bleKeyboard.write(KEY_MEDIA_VOLUME_UP);
+change KEY_MEDIA_VOLUME_UP with any other key (from the keyboard.h library), if you think it might work better
+
+Default settings:
+  uint8_t tilt_changes = 2;    // Number of layers (0,1,2,3)
+  uint8_t tilt_angle = 30;     // Layer angle increment (20,30,40 degrees)
+  uint8_t p360 = 60;           // Pictures per full rotation (40,50,60,80)
+  bool spiral = false;         // Spiral mode
+  uint8_t shrink = 10;         // Layer shrink percentage
+  
+
+
 Happy scanning with OpenScan-LITE! 🚀
 And If you can, please support the original project.
