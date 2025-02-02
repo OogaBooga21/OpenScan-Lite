@@ -1,4 +1,4 @@
-# OpenScan-Lite  
+# OpenScan-Stand
 An Arduino-based branch of the OpenScan project.  
 
 ---
@@ -113,5 +113,5 @@ This implementation is intentionally barebones, so feel free to experiment and e
 
 ---
 
-Happy scanning with OpenScan-Lite! 🚀
+Happy scanning with OpenScan-Stand! 🚀
 And If you can, please support the original project.
