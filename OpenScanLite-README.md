@@ -109,7 +109,9 @@ Here are some options for processing your scanned images:
    - Another powerful option worth trying.  
 ---
 
-## CUSTOMISING VARIABLES:
+When first using the scanner, connect to it using your phone with bluetooth. You will be prompted to do this by the OLED as well, after this, happy scanning
+
+## CUSTOMISABLE VARIABLES:
 
 #define BUTTON_LEFT 16
 #define BUTTON_RIGHT 17
@@ -137,8 +139,10 @@ Default settings:
   uint8_t p360 = 60;           // Pictures per full rotation (40,50,60,80)
   bool spiral = false;         // Spiral mode
   uint8_t shrink = 10;         // Layer shrink percentage
-  
+
+all of this + all option values (in case you want to increase or decrease the values for each setting)
 
 
+### **ENJOY**
 Happy scanning with OpenScan-LITE! 🚀
 And If you can, please support the original project.
