@@ -55,7 +55,7 @@ Required parts:
 ---
 
 ### 2. **Build the Circuit**  
-Follow the guide here for adjusting drivers AND IF YOU ARFE USING A DIFFERENT DRIVER OTHER THAN DRV8825:  
+Follow the guide here for adjusting drivers AND IF YOU ARE USING A DIFFERENT DRIVER OTHER THAN DRV8825:  
 [Stepper Motors and Arduino Guide](https://howtomechatronics.com/tutorials/arduino/stepper-motors-and-arduino-the-ultimate-guide/).  
 
 
